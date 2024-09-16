@@ -24,5 +24,7 @@ describe('Wikipedia Acciones', () => {
     cy.contains('English').click();
     cy.url().should('include', 'en.wikipedia.org');
   });
-
+  it('La barra de búsqueda debería estar visible en la página principal', () => {
+    cy.get('input[name="search"]').should('be.visible');
+  });
 });
